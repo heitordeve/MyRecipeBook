@@ -13,7 +13,7 @@ public class RegisterUserAccountValidator : AbstractValidator<RequestRegisterUse
         RuleFor(user => user.Password).NotEmpty().WithMessage(ResourceMessagesException.VALIDATION_PASSWORD_REQUIRED);
         When(user => string.IsNullOrWhiteSpace(user.Email) == false, () =>
         {
-            RuleFor(user => user.Email).EmailAddress().WithMessage("O email informado não é válido");
+            RuleFor(user => user.Email).EmailAddress().WithMessage(ResourceMessagesException.VALIDATION_EMAIL_INVALID);
         });
     }
 }
