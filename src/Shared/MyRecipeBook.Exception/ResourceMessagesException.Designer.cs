@@ -88,7 +88,7 @@ namespace MyRecipeBook.Exception {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a Oops! Password is required.
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Oops! Password is required..
         /// </summary>
         public static string VALIDATION_PASSWORD_REQUIRED {
             get {

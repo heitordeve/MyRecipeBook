@@ -127,6 +127,6 @@
     <value>Oops! Name is required.</value>
   </data>
   <data name="VALIDATION_PASSWORD_REQUIRED" xml:space="preserve">
-    <value>Oops! Password is required</value>
+    <value>Oops! Password is required.</value>
   </data>
 </root>
