@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Options;
 using System.Globalization;
+using MyRecipeBook.Application;
+using MyRecipeBook.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,9 +10,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 builder.Services.AddSwaggerGen();
+builder.Services.AddApplication();
+builder.Services.AddInfrastructure();
 
-MyRecipeBook.Infrastructure.DependencyInjectionExtension.AddInfrastructure(builder.Services);
-MyRecipeBook.Application.DependencyInjectionExtension.AddApplication(builder.Services);
+
 
 builder.Services.Configure<RequestLocalizationOptions>(options  =>
 {

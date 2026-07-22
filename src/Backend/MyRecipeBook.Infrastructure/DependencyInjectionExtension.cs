@@ -4,10 +4,14 @@ using MyRecipeBook.Infrastructure.Security.PasswordsHashing;
 
 namespace MyRecipeBook.Infrastructure;
 
-public class DependencyInjectionExtension
+public static class DependencyInjectionExtension
 {
-    public static void AddInfrastructure(IServiceCollection services)
+    extension(IServiceCollection services)
+    {
+        public void AddInfrastructure()
     {
         services.AddScoped<IPasswordHasher, Argon2PasswordHasher>();
     }
+}
+    
 }
